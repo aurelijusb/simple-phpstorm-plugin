@@ -1,14 +1,18 @@
 Very simple PHPStorm plugin
 ===========================
 
+Simple project, while learning to write plugins for PHPStorm.
+
 ![Complete array keys by return description](res/exampleArrayCompletion.jpg)
 
 Usage in PHPStorm
 -----------------
 
-Install plugin, _CTRL+SPACE_ inside array keys.
+* Download latest version: [SimplePlugin-v0.3.zip](aurelijus.banelis.lt/intellij/SimplePlugin-v0.3.zip)
+* Settings -> Plugns -> Install from file system. Restart PHPStorm
+* _CTRL+SPACE_ inside array keys.
 
-Example:
+**PHP Code example:**
 
 ```phg
 /** @return string[] [user=>, password=>] */
@@ -19,8 +23,13 @@ function a() {
 $a = a()[''];
 ```
 
-Setting up
-----------
+Setting up dev environment
+--------------------------
+
+Open, compile/run with IntelliJ IDEA
+
+Creating something similar from scratch
+---------------------------------------
 
 * New project -> IntelliJ Plugin -> Project SDK
  * Choose PHP storm installation
