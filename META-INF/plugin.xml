@@ -1,7 +1,7 @@
 <idea-plugin version="2">
   <id>lt.banelis.aurelijus.simplePlugn</id>
   <name>Very simple plugin</name>
-  <version>0.1</version>
+  <version>0.2</version>
   <vendor email="aurelijus@banelis.lt" url="http://aurelijus.banelis.lt">Aurelijus Banelis</vendor>
 
   <description><![CDATA[
@@ -9,33 +9,31 @@
     ]]></description>
 
   <change-notes><![CDATA[
-      Initial
+      <ul>
+        <li><b>v0.2</b> Tools->Show project path</li>
+        <li><b>v0.1</b> Initial</li>
+      </ul>
     ]]>
   </change-notes>
 
   <!-- please see https://confluence.jetbrains.com/display/IDEADEV/Build+Number+Ranges for description -->
-  <idea-version since-build="131"/>
+  <idea-version since-build="107.105"/>
 
-  <!-- please see https://confluence.jetbrains.com/display/IDEADEV/Plugin+Compatibility+with+IntelliJ+Platform+Products
-       on how to target different products -->
-  <!-- uncomment to enable plugin in all products
+  <!-- Mark as compatible w/ all products based on the IntelliJ Platform (IntelliJ IDEA, RubyMine, WebStorm, PhpStorm, PyCharm and AppCode) -->
   <depends>com.intellij.modules.lang</depends>
-  -->
-
-  <extensions defaultExtensionNs="com.intellij">
-    <!-- Add your extensions here -->
-  </extensions>
-
-  <application-components>
-    <!-- Add your application components here -->
-  </application-components>
 
   <project-components>
-    <!-- Add your project components here -->
+    <component>
+      <implementation-class>lt.banelis.aurelijus.simpleplugin.SimplePluginComponent</implementation-class>
+      <loadForDefaultProject/>
+    </component>
   </project-components>
 
   <actions>
-    <!-- Add your actions here -->
+    <action id="lt.banelis.aurelijus.simpleplugin.ProjectPath" class="lt.banelis.aurelijus.simpleplugin.ProjectPath"
+            text="Show project path" description="Show project path">
+      <add-to-group group-id="ToolsMenu" anchor="last"/>
+    </action>
   </actions>
 
 </idea-plugin>
