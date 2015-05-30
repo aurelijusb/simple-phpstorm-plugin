@@ -8,13 +8,13 @@ Simple project, while learning to write plugins for PHPStorm.
 Usage in PHPStorm
 -----------------
 
-* Download latest version: [SimplePlugin-v0.3.zip](aurelijus.banelis.lt/intellij/SimplePlugin-v0.3.zip)
+* Download latest version: [SimplePlugin-v0.3.zip](http://aurelijus.banelis.lt/intellij/SimplePlugin-v0.3.zip)
 * Settings -> Plugns -> Install from file system. Restart PHPStorm
 * _CTRL+SPACE_ inside array keys.
 
 **PHP Code example:**
 
-```phg
+```php
 /** @return string[] [user=>, password=>] */
 function a() {
     return [];
